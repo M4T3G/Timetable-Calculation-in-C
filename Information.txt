@@ -1,0 +1,56 @@
+Kodun Genel Amacı
+Program, kullanıcıdan belirli sayıda işlem (iş kodu, süre ve bağlantı bilgileri) alarak bu işlemleri bir matris yapısında saklar. Daha sonra bu işlemleri ekrana matris ve zaman çizelgesi şeklinde yazdırır. Ayrıca işlemler bir bağlı liste mantığı ile birbirlerine bağlanarak sıralı şekilde işlenir.
+
+Anahtar Fonksiyonlar
+main() Fonksiyonu
+Kullanıcıdan işlem sayısını (n) alır.
+Her işlem için işlem kodu (A, B, C, ... gibi) ve işlem süresini ister.
+Linked list bağlantıları belirlenir (her işlem için hangi işlemden sonra çalışacağını kullanıcıdan alır).
+Sonuçları ekrana yazdırır.
+isKoduAlma() Fonksiyonu
+Kullanıcıdan işlemlerin işlem kodlarını (A, B, C, ...) alır ve matrisin ilk sütununa kaydeder.
+Aynı işlem kodunun tekrar girilmesini engellemek için oncekilerleKiyas() fonksiyonunu kullanır.
+Kullanıcıdan her işlem için tamamlanma süresini alır ve ikinci sütuna kaydeder.
+oncekilerleKiyas() Fonksiyonu
+Aynı işlem kodunun tekrar girilmesini engeller. Daha önce girilmiş işlem kodlarını kontrol eder.
+ekranaYazdirma() Fonksiyonu
+İşlem matrisini ekrana yazdırır.
+Zaman çizelgesini oluşturur ve işlem sürelerine göre işlemleri sırasıyla ekrana basar.
+Matris Yapısı
+Matrisin her satırı bir işlemi temsil eder ve sütunlar şu şekilde düzenlenmiştir:
+
+Sütun İndeksi	Anlamı
+0	İşlem kodu (A, B, C)
+1	Tamamlanma süresi
+2	Bağlı işlem indeksi
+Örnek Çalışma
+less
+Kopyala
+Düzenle
+Is sayisini giriniz: 3
+
+1. is kodunuzu oncekilerden farkli sekilde giriniz: A
+A isi icin bu isin tamamlanma suresini giriniz: 2
+
+2. is kodunuzu oncekilerden farkli sekilde giriniz: B
+B isi icin bu isin tamamlanma suresini giriniz: 3
+
+3. is kodunuzu oncekilerden farkli sekilde giriniz: C
+C isi icin bu isin tamamlanma suresini giriniz: 1
+
+Linked listinizin head degerini giriniz: 0
+A isi icin bu isin linklendigi sayiyi giriniz: 1
+B isi icin bu isin linklendigi sayiyi giriniz: 2
+C isi icin bu isin linklendigi sayiyi giriniz: -1
+
+Matrisiniz:  
+ A 2 1  
+ B 3 2  
+ C 1 -1  
+
+Islerin zaman cizelgesi:  A A B B B C
+Önemli Noktalar
+Linked List Mantığı: İşlemler bağlı liste ile sıralı şekilde geziliyor.
+Tekrar Kontrolü: İş kodlarının tekrarı engelleniyor.
+Matris ve Zaman Çizelgesi: Kullanıcı girdileri matris şeklinde ve sıralı şekilde yazdırılıyor.
+Bu yapı daha büyük sistemlerde işlem sıralaması ve takvimi oluşturmak için kullanılabilir
